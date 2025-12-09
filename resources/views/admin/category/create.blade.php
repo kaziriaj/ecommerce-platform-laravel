@@ -4,7 +4,7 @@
     <section>
         <div class="col-12 col-md-12 col-lg-12">
                 <div class="card">
-                  <form action="{{route('category.store')}}" method="POST">
+                  <form action="{{route('category.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card-header">
                       <h4>Category Create</h4>
@@ -16,7 +16,7 @@
                         
                       </div>
                       <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="customFile">
+                      <input type="file" class="custom-file-input" name="image" id="customFile">
                       <label class="custom-file-label" for="customFile">Choose file</label>
                     </div>
                     </div>
