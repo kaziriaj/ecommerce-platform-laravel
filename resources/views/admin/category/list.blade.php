@@ -17,21 +17,23 @@
                           <th>Status</th>
                           <th>Action</th>
                         </tr>
-                        @foreach ($category as $cate)
+                        @foreach ($category as $key => $cate)
                         <tr>
-                          <td>1</td>
+                          <td>{{$key +1 }}</td>
                           <td>{{ $cate->name }}</td>
-                          <td>2017-01-09</td>
                           <td>
-                            <div class="badge badge-success">Active</div>
+                            <img src="{{ asset('storage/category/' . $cate->image) }}" alt="">
                           </td>
                           <td>
-                            <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
+                            <div class="badge {{ $cate->status === 'inactive' ? 'badge-danger' : 'badge-success'}}  text-capitalize">{{ $cate->status }}</div>
                           </td>
-                        </tr>  
+                          <td>
+                            <a href="{{ route('category.edit', $cate->slug) }}" class="btn btn-primary">Edit</a>
+                            <a href="{{ route('category.delete', $cate->slug) }}" class="btn btn-danger">Delete</a>
+                          </td>
+                        </tr>
                         @endforeach
-                        
+
                       </tbody>
                     </table>
                     </div>
