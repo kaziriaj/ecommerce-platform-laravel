@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminLoginController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\UserLoginController;
 use App\Http\Controllers\User\UserRegisterController;
@@ -23,6 +26,23 @@ Route::get('/', function () {
     return view('frontend.index');
 });
 
+// Admin login
+Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
+Route::post('/admin/login', [AdminLoginController::class, 'login']);
+Route::post('/admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
+// Dashboards protected by role
+Route::get('/admin/dashboard', function(){ return "Admin Dashboard"; })->middleware('admin.role:admin');
+Route::get('/editor/dashboard', function(){ return "Editor Dashboard"; })->middleware('admin.role:editor');
+Route::get('/seller/dashboard', function(){ return "Seller Dashboard"; })->middleware('admin.role:seller');
+Route::get('/receiver/dashboard', function(){ return "Receiver Dashboard"; })->middleware('admin.role:receiver');
 
+//category
 
+Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
+Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+
+//Product
+
+Route::get('/product', [ProductController::class, 'index'])->name('product.index');
+Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
