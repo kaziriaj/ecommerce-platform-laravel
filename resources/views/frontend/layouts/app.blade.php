@@ -89,7 +89,7 @@
                             <span class="sr-only">Toggle mobile menu</span>
                             <i class="icon-bars"></i>
                         </button>
-                        
+
                         <a href="index.html" class="logo">
                             <img src="{{ asset('assets/frontend') }}/assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
                         </a>
@@ -98,7 +98,7 @@
                     <div class="header-center">
                         <div class="header-search header-search-extended header-search-visible d-none d-lg-block">
                             <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
-                            <form action="#" method="get">
+                            <form action="#" method="POST">
                                 <div class="header-search-wrapper search-wrapper-wide">
                                     <label for="q" class="sr-only">Search</label>
                                     <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
@@ -622,10 +622,10 @@
 
         <main class="main">
             <div class="intro-slider-container mb-5">
-                <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" 
+                <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl"
                     data-owl-options='{
                         "dots": true,
-                        "nav": false, 
+                        "nav": false,
                         "responsive": {
                             "1200": {
                                 "nav": true,
@@ -686,7 +686,7 @@
 
             <div class="container">
                 <h2 class="title text-center mb-4">Explore Popular Categories</h2><!-- End .title text-center -->
-                
+
                 <div class="cat-blocks-container">
                     <div class="row">
                         <div class="col-6 col-sm-4 col-lg-2">
@@ -846,9 +846,9 @@
 
                 <div class="tab-content tab-content-carousel just-action-icons-sm">
                     <div class="tab-pane p-0 fade show active" id="new-all-tab" role="tabpanel" aria-labelledby="new-all-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
-                                "nav": true, 
+                                "nav": true,
                                 "dots": true,
                                 "margin": 20,
                                 "loop": false,
@@ -1089,9 +1089,9 @@
                         </div><!-- End .owl-carousel -->
                     </div><!-- .End .tab-pane -->
                     <div class="tab-pane p-0 fade" id="new-tv-tab" role="tabpanel" aria-labelledby="new-tv-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
-                                "nav": true, 
+                                "nav": true,
                                 "dots": true,
                                 "margin": 20,
                                 "loop": false,
@@ -1298,9 +1298,9 @@
                         </div><!-- End .owl-carousel -->
                     </div><!-- .End .tab-pane -->
                     <div class="tab-pane p-0 fade" id="new-computers-tab" role="tabpanel" aria-labelledby="new-computers-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
-                                "nav": true, 
+                                "nav": true,
                                 "dots": true,
                                 "margin": 20,
                                 "loop": false,
@@ -1507,9 +1507,9 @@
                         </div><!-- End .owl-carousel -->
                     </div><!-- .End .tab-pane -->
                     <div class="tab-pane p-0 fade" id="new-phones-tab" role="tabpanel" aria-labelledby="new-phones-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
-                                "nav": true, 
+                                "nav": true,
                                 "dots": true,
                                 "margin": 20,
                                 "loop": false,
@@ -1750,9 +1750,9 @@
                         </div><!-- End .owl-carousel -->
                     </div><!-- .End .tab-pane -->
                     <div class="tab-pane p-0 fade" id="new-watches-tab" role="tabpanel" aria-labelledby="new-watches-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
-                                "nav": true, 
+                                "nav": true,
                                 "dots": true,
                                 "margin": 20,
                                 "loop": false,
@@ -1925,9 +1925,9 @@
                         </div><!-- End .owl-carousel -->
                     </div><!-- .End .tab-pane -->
                     <div class="tab-pane p-0 fade" id="new-acc-tab" role="tabpanel" aria-labelledby="new-acc-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
-                                "nav": true, 
+                                "nav": true,
                                 "dots": true,
                                 "margin": 20,
                                 "loop": false,
@@ -2208,9 +2208,9 @@
 
             <div class="container">
                 <hr class="mb-0">
-                <div class="owl-carousel mt-5 mb-5 owl-simple" data-toggle="owl" 
+                <div class="owl-carousel mt-5 mb-5 owl-simple" data-toggle="owl"
                     data-owl-options='{
-                        "nav": false, 
+                        "nav": false,
                         "dots": false,
                         "margin": 30,
                         "loop": false,
@@ -2292,9 +2292,9 @@
                         <div class="col-xl-4-5col">
                             <div class="tab-content tab-content-carousel just-action-icons-sm">
                                 <div class="tab-pane p-0 fade show active" id="trending-top-tab" role="tabpanel" aria-labelledby="trending-top-link">
-                                    <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                                    <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                                         data-owl-options='{
-                                            "nav": true, 
+                                            "nav": true,
                                             "dots": false,
                                             "margin": 20,
                                             "loop": false,
@@ -2504,9 +2504,9 @@
                                     </div><!-- End .owl-carousel -->
                                 </div><!-- .End .tab-pane -->
                                 <div class="tab-pane p-0 fade" id="trending-best-tab" role="tabpanel" aria-labelledby="trending-best-link">
-                                    <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                                    <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                                         data-owl-options='{
-                                            "nav": true, 
+                                            "nav": true,
                                             "dots": false,
                                             "margin": 20,
                                             "loop": false,
@@ -2710,9 +2710,9 @@
                                     </div><!-- End .owl-carousel -->
                                 </div><!-- .End .tab-pane -->
                                 <div class="tab-pane p-0 fade" id="trending-sale-tab" role="tabpanel" aria-labelledby="trending-sale-link">
-                                    <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                                    <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                                         data-owl-options='{
-                                            "nav": true, 
+                                            "nav": true,
                                             "dots": false,
                                             "margin": 20,
                                             "loop": false,
@@ -3297,7 +3297,7 @@
                                 <h3 class="cta-title text-white">Get The Latest Deals</h3><!-- End .cta-title -->
                                 <p class="cta-desc text-white">and receive <span class="font-weight-normal">$20 coupon</span> for first shopping</p><!-- End .cta-desc -->
                             </div><!-- End .text-center -->
-                        
+
                             <form action="#">
                                 <div class="input-group input-group-round">
                                     <input type="email" class="form-control form-control-white" placeholder="Enter your Email Address" aria-label="Email Adress" required>
@@ -3321,7 +3321,7 @@
 	            				<div class="widget-call">
                                     <i class="icon-phone"></i>
                                     Got Question? Call us 24/7
-                                    <a href="tel:#">+0123 456 789</a>         
+                                    <a href="tel:#">+0123 456 789</a>
                                 </div><!-- End .widget-call -->
 	            			</div><!-- End .widget about-widget -->
 	            		</div><!-- End .col-sm-6 col-lg-3 -->
@@ -3390,7 +3390,7 @@
     <div class="mobile-menu-container mobile-menu-light">
         <div class="mobile-menu-wrapper">
             <span class="mobile-menu-close"><i class="icon-close"></i></span>
-            
+
             <form action="#" method="get" class="mobile-search">
                 <label for="mobile-search" class="sr-only">Search</label>
                 <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search in..." required>
@@ -3607,15 +3607,16 @@
                             </ul>
                             <div class="tab-content" id="tab-content-5">
                                 <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
-                                    <form action="#">
+                                    <form action="{{ route('login') }}" method="POST">
+							    		@csrf
                                         <div class="form-group">
                                             <label for="singin-email">Username or email address *</label>
-                                            <input type="text" class="form-control" id="singin-email" name="singin-email" required>
+                                            <input type="text" class="form-control" id="email" name="email" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-group">
                                             <label for="singin-password">Password *</label>
-                                            <input type="password" class="form-control" id="singin-password" name="singin-password" required>
+                                            <input type="password" class="form-control" id="singin-password" name="password" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-footer">
@@ -3651,15 +3652,20 @@
                                     </div><!-- End .form-choice -->
                                 </div><!-- .End .tab-pane -->
                                 <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-                                    <form action="#">
+                                    <form action="{{ route('register') }}" method="POST">
+                                        @csrf
+                                        <div class="form-group">
+                                            <label for="register-name">Your Good Name *</label>
+                                            <input type="text" class="form-control" id="register-email" name="name" required>
+                                        </div><!-- End .form-group -->
                                         <div class="form-group">
                                             <label for="register-email">Your email address *</label>
-                                            <input type="email" class="form-control" id="register-email" name="register-email" required>
+                                            <input type="email" class="form-control" id="register-email" name="email" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-group">
                                             <label for="register-password">Password *</label>
-                                            <input type="password" class="form-control" id="register-password" name="register-password" required>
+                                            <input type="password" class="form-control" id="register-password" name="password" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-footer">
