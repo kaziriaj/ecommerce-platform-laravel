@@ -90,7 +90,7 @@ class CategoryController extends Controller
         return redirect()->route('category.index')->with('success', 'Category Updated successfully!');
     }
 
-    public function delete($slug)
+    public function destroy($slug)
     {
         $category = Category::where('slug', $slug)->firstOrFail();
          // Delete image if exists
