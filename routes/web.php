@@ -28,12 +28,14 @@ Route::get('/', function () {
 
 // Admin login
 Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
-Route::post('/admin/login', [AdminLoginController::class, 'login']);
+Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin.login.submit');
 Route::post('/admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
 // Dashboards protected by role
-Route::get('/admin/dashboard', function(){ return "Admin Dashboard"; })->middleware('admin.role:admin');
-Route::get('/editor/dashboard', function(){ return "Editor Dashboard"; })->middleware('admin.role:editor');
+Route::get('/admin/dashboard', function(){
+    return view('admin.dashboard');
+})->middleware('role:admin');
+Route::get('/editor/dashboard', function(){ return "Editor Dashboard"; })->middleware('role:editor');
 Route::get('/seller/dashboard', function(){ return "Seller Dashboard"; })->middleware('admin.role:seller');
 Route::get('/receiver/dashboard', function(){ return "Receiver Dashboard"; })->middleware('admin.role:receiver');
 

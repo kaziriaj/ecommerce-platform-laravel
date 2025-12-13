@@ -10,6 +10,18 @@ class AdminLoginController extends Controller
 {
     public function showLoginForm()
     {
+        if(Auth::guard('admin')->check()){
+            //Already logged in
+            $role = strtolower(Auth::guard('admin')->user()->role->name);
+
+            return match($role){
+                'admin' => redirect('/admin/dashboard'),
+            'editor' => redirect('/editor/dashboard'),
+            'seller' => redirect('/seller/dashboard'),
+            'receiver' => redirect('/receiver/dashboard'),
+            default => redirect('/admin/dashboard')
+            };
+        }
         return view('admin.login');
     }
 
@@ -27,18 +39,23 @@ class AdminLoginController extends Controller
                 $role = Auth::guard('admin')->user()->role->name;
 
                 // Redirect based on role
-                switch ($role) {
-                    case 'admin':
-                        return redirect('/admin/dashboard');
-                    case 'editor':
-                        return redirect('/editor/dashboard');
-                    case 'seller':
-                        return redirect('/seller/dashboard');
-                    case 'receiver':
-                        return redirect('/receiver/dashboard');
-                    default:
-                        return redirect('/admin/dashboard');
-                    }
+                // switch ($role) {
+                //     case 'admin':
+                //         return redirect('/admin/dashboard');
+                //     case 'editor':
+                //         return redirect('/editor/dashboard');
+                //     case 'seller':
+                //         return redirect('/seller/dashboard');
+                //     case 'receiver':
+                //         return redirect('/receiver/dashboard');
+                //     default:
+                //         return redirect('/admin/dashboard');
+                //     }
+
+                return match($role) {
+                    'admin' => redirect('/admin/dashboard'),
+                    'editor' => redirect('/editor/dashboard'),
+                };
             }
 
             return back()->withErrors([

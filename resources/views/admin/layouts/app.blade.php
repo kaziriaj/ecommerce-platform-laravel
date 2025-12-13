@@ -167,9 +167,12 @@
                 Settings
               </a>
               <div class="dropdown-divider"></div>
-              <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+              <form id="logout-form" action="{{ route('admin.logout') }}" method="POST">
+                @csrf
+              <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
                 Logout
               </a>
+              </form>
             </div>
           </li>
         </ul>
