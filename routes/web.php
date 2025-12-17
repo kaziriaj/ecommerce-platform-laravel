@@ -19,7 +19,7 @@ Route::post('/register', [UserRegisterController::class, 'register']);
 // Example protected user dashboard
 Route::get('/dashboard', function () {
     return view('user.dashboard');
-})->middleware('auth');
+})->middleware('auth')->name('user.dashboar');
 
 
 Route::get('/', function () {
@@ -43,8 +43,16 @@ Route::get('/receiver/dashboard', function(){ return "Receiver Dashboard"; })->m
 
 Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
 Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::post('/category/create', [CategoryController::class, 'store'])->name('category.store');
+Route::get('/category/{slug}/edit', [CategoryController::class, 'edit'])->name('category.edit');
+Route::put('/category/{slug}/update', [CategoryController::class, 'update'])->name('category.update');
+Route::get('/category/{slug}/delete', [CategoryController::class, 'destroy'])->name('category.destroy');
 
 //Product
 
 Route::get('/product', [ProductController::class, 'index'])->name('product.index');
 Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
+Route::post('/product/create', [ProductController::class, 'store'])->name('product.store');
+Route::get('/product/{slug}/edit', [ProductController::class, 'edit'])->name('product.edit');
+Route::put('/product/{slug}/edit', [ProductController::class, 'update'])->name('product.update');
+Route::get('/product/{slug}/detele', [ProductController::class, 'destroy'])->name('product.destroy');

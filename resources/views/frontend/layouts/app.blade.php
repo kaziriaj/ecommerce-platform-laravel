@@ -73,7 +73,8 @@
                                             </div><!-- End .header-menu -->
                                         </div>
                                     </li>
-                                    <li><a href="#signin-modal" data-toggle="modal">Sign in / Sign up</a></li>
+                                  @guest  <li><a href="#signin-modal" data-toggle="modal">Sign in / Sign up</a></li> @endguest
+                                  @auth  <li><a href="{{ route('user.dashboar')}}"><i class="la la-user"></i>Profile</a></li> @endauth
                                 </ul>
                             </li>
                         </ul><!-- End .top-menu -->
