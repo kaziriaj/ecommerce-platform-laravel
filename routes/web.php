@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\SlideshowController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\UserLoginController;
 use App\Http\Controllers\User\UserRegisterController;
@@ -56,3 +57,6 @@ Route::post('/product/create', [ProductController::class, 'store'])->name('produ
 Route::get('/product/{slug}/edit', [ProductController::class, 'edit'])->name('product.edit');
 Route::put('/product/{slug}/edit', [ProductController::class, 'update'])->name('product.update');
 Route::get('/product/{slug}/detele', [ProductController::class, 'destroy'])->name('product.destroy');
+
+//website slider
+Route::resource('slider', SlideshowController::class);

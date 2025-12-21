@@ -212,28 +212,9 @@
                 <li><a class="nav-link" href="email-read.html">read</a></li>
               </ul>
             </li>
-            <li class="menu-header">UI Elements</li>
+            <li class="menu-header">Website Element</li>
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="copy"></i><span>Basic
-                  Components</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="alert.html">Alert</a></li>
-                <li><a class="nav-link" href="badge.html">Badge</a></li>
-                <li><a class="nav-link" href="breadcrumb.html">Breadcrumb</a></li>
-                <li><a class="nav-link" href="buttons.html">Buttons</a></li>
-                <li><a class="nav-link" href="collapse.html">Collapse</a></li>
-                <li><a class="nav-link" href="dropdown.html">Dropdown</a></li>
-                <li><a class="nav-link" href="checkbox-and-radio.html">Checkbox &amp; Radios</a></li>
-                <li><a class="nav-link" href="list-group.html">List Group</a></li>
-                <li><a class="nav-link" href="media-object.html">Media Object</a></li>
-                <li><a class="nav-link" href="navbar.html">Navbar</a></li>
-                <li><a class="nav-link" href="pagination.html">Pagination</a></li>
-                <li><a class="nav-link" href="popover.html">Popover</a></li>
-                <li><a class="nav-link" href="progress.html">Progress</a></li>
-                <li><a class="nav-link" href="tooltip.html">Tooltip</a></li>
-                <li><a class="nav-link" href="flags.html">Flag</a></li>
-                <li><a class="nav-link" href="typography.html">Typography</a></li>
-              </ul>
+              <a href="{{ route('slider.index') }}" class=" nav-link"><i data-feather="copy"></i><span>Slide Show</span></a>
             </li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i
