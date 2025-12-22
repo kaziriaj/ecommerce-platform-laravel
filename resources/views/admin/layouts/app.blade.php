@@ -217,6 +217,9 @@
               <a href="{{ route('slider.index') }}" class=" nav-link"><i data-feather="copy"></i><span>Slide Show</span></a>
             </li>
             <li class="dropdown">
+              <a href="{{ route('websitepopup.index') }}" class=" nav-link"><i data-feather="copy"></i><span>News Letter Popup</span></a>
+            </li>
+            <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i
                   data-feather="shopping-bag"></i><span>Advanced</span></a>
               <ul class="dropdown-menu">

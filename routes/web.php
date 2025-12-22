@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\SlideshowController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\UserLoginController;
 use App\Http\Controllers\User\UserRegisterController;
+use App\Http\Controllers\WebsitePopupController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -60,3 +61,7 @@ Route::get('/product/{slug}/detele', [ProductController::class, 'destroy'])->nam
 
 //website slider
 Route::resource('slider', SlideshowController::class);
+
+//website newsletter popup
+
+Route::resource('websitepopup', WebsitePopupController::class);
