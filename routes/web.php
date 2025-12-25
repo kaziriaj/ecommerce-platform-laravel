@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SlideshowController;
+use App\Http\Controllers\HomepageCategoryController;
+use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\UserLoginController;
 use App\Http\Controllers\User\UserRegisterController;
@@ -23,11 +25,11 @@ Route::get('/dashboard', function () {
     return view('user.dashboard');
 })->middleware('auth')->name('user.dashboar');
 
+//Frontend HOme page
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
-
+Route::get('/', [HomepageController::class, 'index'])->name('homepage');
+Route::get('/category/{id}', [HomepageCategoryController::class, 'index'])
+    ->name('category.products');
 // Admin login
 Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin.login.submit');
